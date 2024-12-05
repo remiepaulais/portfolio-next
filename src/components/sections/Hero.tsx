@@ -1,44 +1,43 @@
 'use client'
 
-import React from 'react'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Me from '@/assets/me.jpg'
 import { Globe } from 'lucide-react'
 import { motion } from 'motion/react'
-import { DotPattern } from '@/components/ui/dot-pattern'
+import { MotionDotPattern } from '@/components/ui/dot-pattern'
 import ZoopText from '../ZoopText'
 
 export default function Hero() {
   // TODO: Mobile responsiveness + Check for reduced motion
+
   return (
     <section className='relative min-h-screen'>
-      <motion.div
-        initial={{
-          y: -20,
-          opacity: 0
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-          transition: {
-            duration: 3,
-            ease: 'easeOut'
-          }
-        }}
-        className='absolute inset-0 -z-50 min-h-screen overflow-hidden'
-      >
-        <DotPattern
+      <div className='absolute inset-0 -z-50 min-h-screen overflow-hidden'>
+        <MotionDotPattern
+          initial={{
+            y: -20,
+            opacity: 0
+          }}
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              duration: 3,
+              ease: 'easeOut'
+            }
+          }}
           width={40}
           height={40}
           cx={1}
           cy={1}
           cr={1}
+          y='y'
           className={clsx(
             '-z-10 [mask-image:radial-gradient(circle,white,10%,transparent)]'
           )}
         />
-      </motion.div>
+      </div>
       <div className='container mx-auto flex h-screen items-center justify-between'>
         <div className='flex flex-col items-start'>
           <motion.p
