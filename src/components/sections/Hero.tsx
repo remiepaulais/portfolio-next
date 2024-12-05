@@ -38,7 +38,7 @@ export default function Hero() {
           )}
         />
       </div>
-      <div className='container mx-auto flex h-screen items-center justify-between'>
+      <div className='container mx-auto flex h-screen max-w-4xl items-center justify-between'>
         <div className='flex flex-col items-start'>
           <motion.p
             initial={{
