@@ -16,7 +16,7 @@ export default function Header() {
         transition: { duration: 2, ease: 'circOut' },
         y: 0
       }}
-      className='container fixed left-0 right-0 top-0 z-50 mx-auto my-6'
+      className='container fixed left-0 right-0 top-0 z-50 mx-auto my-6 px-8'
     >
       <div className='relative flex items-center justify-between'>
         <Logo />
