@@ -57,15 +57,11 @@ export default function Hero() {
           >
             Hi, I&apos;m
           </motion.p>
-          <motion.h1
-            initial='initial'
-            animate='animate'
-            whileHover='whileHover'
-            className='-ml-1 w-[500px] text-[128px] font-bold leading-none tracking-tight'
-          >
+          <h1 className='-ml-1 text-[128px] font-bold leading-none tracking-tight'>
             <ZoopText delay={1}>Rémi</ZoopText>
+            <br />
             <ZoopText delay={1.2}>Epaulais</ZoopText>
-          </motion.h1>
+          </h1>
           <motion.h2
             initial={{
               opacity: 0,
@@ -123,11 +119,16 @@ export default function Hero() {
                 transition: { delay: 3, duration: 1, ease: 'circOut' }
               }}
             >
-              <Image
-                src={Me}
-                alt="It's me"
-                className='inset-0 h-full scale-110 object-cover'
-              />
+              <motion.div
+                className='h-full w-full'
+                whileHover={{ scale: 1.1, rotate: 3 }}
+              >
+                <Image
+                  src={Me}
+                  alt="It's me"
+                  className='inset-0 h-full scale-110 object-cover'
+                />
+              </motion.div>
             </motion.div>
           </div>
           <motion.div

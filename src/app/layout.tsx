@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/Header'
+import Header from '@/components/sections/Header'
+import Cursor from '@/components/Cursor'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
