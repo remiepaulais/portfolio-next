@@ -11,7 +11,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Welcome!',
+  title: 'Rémi Epaulais | Home',
   description: "Rémi's Creative Portfolio",
   icons: {
     icon: '/favicon.svg'

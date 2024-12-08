@@ -20,6 +20,10 @@ export const NAV_ITEMS = [
     href: '/skills'
   },
   {
+    name: 'Projects',
+    href: '/projects'
+  },
+  {
     name: 'About',
     href: '/about'
   }
@@ -34,6 +38,7 @@ export interface Skill {
     title: string
     content: string[]
   }
+  website?: string
 }
 
 export const SKILLS: Skill[] = [
@@ -48,7 +53,8 @@ export const SKILLS: Skill[] = [
         'It introduces static typing, interfaces, generics, and advanced object-oriented features to JavaScript.',
         'While some developers find it more verbose, the benefits of catching errors early and better tooling support make it increasingly popular.'
       ]
-    }
+    },
+    website: 'https://www.typescriptlang.org/'
   },
   {
     name: 'React',
@@ -61,7 +67,8 @@ export const SKILLS: Skill[] = [
         'It introduces a component-based architecture that makes building complex UIs more manageable.',
         'React uses a Virtual DOM for efficient rendering and updates, making applications fast and responsive.'
       ]
-    }
+    },
+    website: 'https://reactjs.org/'
   },
   {
     name: 'NextJS',
@@ -75,7 +82,8 @@ export const SKILLS: Skill[] = [
         'Next.js handles optimization out of the box, including image optimization, font optimization, and script loading strategies.',
         'Its hybrid static & server rendering approach makes it perfect for building fast, SEO-friendly applications.'
       ]
-    }
+    },
+    website: 'https://nextjs.org/'
   },
   {
     name: 'TailwindCSS',
@@ -88,7 +96,8 @@ export const SKILLS: Skill[] = [
         'It provides a highly customizable design system with consistent spacing, colors, and typography.',
         'The framework generates only the CSS you use, resulting in minimal production bundles.'
       ]
-    }
+    },
+    website: 'https://tailwindcss.com/'
   },
   {
     name: 'Motion',
@@ -102,7 +111,8 @@ export const SKILLS: Skill[] = [
         'It use to be known as Framer Motion but it became independent very recently in 2024!'
       ]
     },
-    new: true
+    new: true,
+    website: 'https://motion.dev/'
   },
   {
     name: 'NuxtJS',
@@ -116,7 +126,8 @@ export const SKILLS: Skill[] = [
         'It simplifies Vue development with conventions and optimizations out of the box!'
       ]
     },
-    new: true
+    new: true,
+    website: 'https://nuxt.com/'
   },
   {
     name: 'SQLite',
@@ -128,10 +139,11 @@ export const SKILLS: Skill[] = [
         'SQLite is a lightweight, file-based database management system.',
         'It requires no separate server process and is perfect for quick prototyping',
         'Perfect for local storage, and small to medium-scale applications.',
-        'SQLite is the most widely deployed database engine, used in browsers, phones, and embedded systems.'
+        'They have a way better looking website than I do, you should check it out! :)'
       ]
     },
-    new: true
+    new: true,
+    website: 'https://www.sqlite.org/'
   },
   {
     name: 'AppWrite',
@@ -146,7 +158,8 @@ export const SKILLS: Skill[] = [
         'Self-hosted alternative to Firebase, giving developers full control over their data and infrastructure.'
       ]
     },
-    new: true
+    new: true,
+    website: 'https://appwrite.io/'
   },
   {
     name: 'UI/UX',

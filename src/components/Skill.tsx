@@ -11,6 +11,15 @@ import {
   ModalContent,
   ModalTrigger
 } from './ui/animated-modal'
+import { Button } from './ui/button'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Skills',
+  description: 'My skills and technologies'
+}
 
 export default function Skill({
   skill,
@@ -45,7 +54,7 @@ export default function Skill({
                 <div className='w-24 px-5 transition duration-200 group-hover:scale-110 group-hover:text-neutral-50'>
                   {skill.icon}
                 </div>
-                <p className='text-5xl font-bold transition delay-100 duration-200 group-hover:scale-110 group-hover:text-neutral-50'>
+                <p className='text-5xl font-bold transition duration-200 group-hover:scale-110 group-hover:text-neutral-50'>
                   <ZoopText delay={delay + 0.3}>{skill.name}</ZoopText>
                 </p>
               </motion.div>
@@ -65,7 +74,7 @@ export default function Skill({
 
         {skill.description && (
           <ModalBody className='dark relative bg-neutral-900 text-white'>
-            <ModalContent className='flex items-center justify-center'>
+            <ModalContent className='my-8 flex items-center justify-center'>
               <div className='flex items-center justify-center gap-4'>
                 <div className='absolute -left-24 -top-24 -z-10 size-96 text-neutral-800'>
                   {skill.icon}
@@ -86,7 +95,18 @@ export default function Skill({
                   </p>
                 ))}
               </div>
-              {/* Add more detailed content about the skill here */}
+              {skill.website && (
+                <Button
+                  asChild
+                  className='absolute bottom-4 right-4 rounded-full px-4'
+                  size='sm'
+                >
+                  <Link href={skill.website} target='_blank' rel='noreferrer'>
+                    Visit Website
+                    <ArrowRight />
+                  </Link>
+                </Button>
+              )}
             </ModalContent>
           </ModalBody>
         )}

@@ -1,5 +1,15 @@
+import { Metadata } from 'next'
 import React from 'react'
 
+export const metadata: Metadata = {
+  title: 'Rémi Epaulais | About',
+  description: 'Your first place to learn everything about me!'
+}
+
 export default function AboutPage() {
-  return <div>AboutPage</div>
+  return (
+    <main className='container mx-auto flex min-h-screen items-center justify-center'>
+      About Page
+    </main>
+  )
 }
