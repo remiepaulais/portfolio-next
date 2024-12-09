@@ -67,9 +67,14 @@ export default function Home() {
         <Globe />
         <p>
           From France
-          <span className='ml-3 inline-block group-hover:animate-[spin_1s_ease-out_forwards]'>
-            🥖
-          </span>
+          <motion.span
+            className='ml-3 inline-block'
+            initial={{ rotate: 0 }}
+            whileHover={{ rotate: 360 }}
+            transition={{ ease: 'easeOut', type: 'spring', stiffness: 100 }}
+          >
+            🥐
+          </motion.span>
         </p>
       </motion.div>
     </main>
