@@ -27,6 +27,7 @@ export default function Header() {
               key={index}
               href={item.href}
               className="relative rounded-md p-2 transition after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-[width] after:duration-300 after:content-[''] hover:after:w-full"
+              aria-label={`Go to ${item.name} page`}
             >
               {item.name}
             </Link>

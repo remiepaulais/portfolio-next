@@ -33,7 +33,7 @@ export default function Skill({
     <li className='group relative flex flex-col gap-4 py-2'>
       <Modal>
         <ModalTrigger>
-          <motion.li
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -69,7 +69,7 @@ export default function Skill({
                 )}
               </div>
             </div>
-          </motion.li>
+          </motion.div>
         </ModalTrigger>
 
         {skill.description && (

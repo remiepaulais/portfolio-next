@@ -7,8 +7,6 @@ import { motion } from 'motion/react'
 interface DotPatternProps {
   width?: number
   height?: number
-  x?: number
-  y?: number
   cx?: number
   cy?: number
   cr?: number
@@ -21,8 +19,6 @@ const DotPattern = React.forwardRef(
     {
       width = 16,
       height = 16,
-      x = 0,
-      y = 0,
       cx = 1,
       cy = 1,
       cr = 1,
@@ -64,8 +60,6 @@ const DotPattern = React.forwardRef(
               height={height}
               patternUnits='userSpaceOnUse'
               patternContentUnits='userSpaceOnUse'
-              x={x}
-              y={y}
             >
               <circle id='pattern-circle' cx={cx} cy={cy} r={cr} />
             </motion.pattern>

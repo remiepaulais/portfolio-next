@@ -34,7 +34,6 @@ export default function RootLayout({
             cx={1}
             cy={1}
             cr={1}
-            y='y'
             className={clsx(
               '-z-10 [mask-image:radial-gradient(circle,white,10%,transparent)]'
             )}
