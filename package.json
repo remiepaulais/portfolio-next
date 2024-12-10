@@ -13,23 +13,25 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.465.0",
-    "motion": "^11.13.1",
+    "motion": "^11.13.5",
     "next": "15.0.3",
+    "next-themes": "^0.4.4",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-rough-notation": "^1.0.5",
+    "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@types/node": "^20.17.9",
+    "@types/react": "^18.3.15",
+    "@types/react-dom": "^18.3.3",
+    "eslint": "^8.57.1",
     "eslint-config-next": "15.0.3",
-    "postcss": "^8",
+    "postcss": "^8.4.49",
     "prettier-plugin-tailwindcss": "^0.6.9",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2"
   }
 }

@@ -7,6 +7,7 @@ import { SOCIALS } from '@/constants'
 import { Button } from '../ui/button'
 import { RoughNotation } from 'react-rough-notation'
 import { motion } from 'motion/react'
+import { toast } from 'sonner'
 
 export default function About() {
   const [state, setState] = useState({
@@ -16,16 +17,35 @@ export default function About() {
   useEffect(() => {
     setTimeout(() => {
       setState((prev) => ({ ...prev, show: true }))
-    }, 2000)
-  })
+    }, 1000)
+  }, [])
+
+  const handleEmailCopy = async (email: string) => {
+    try {
+      if (navigator.clipboard) {
+        await navigator.clipboard.writeText(email)
+        toast.success('Copied to clipboard!')
+      } else if (navigator.share) {
+        // Fallback for mobile devices - opens native share dialog
+        await navigator.share({
+          text: email
+        })
+        toast.success('Email ready to share!')
+      } else {
+        throw new Error('Clipboard API not supported')
+      }
+    } catch {
+      toast.error('Unable to copy email')
+    }
+  }
 
   return (
-    <main className='grid w-full max-w-5xl grid-cols-2 gap-4'>
+    <div className='grid w-full max-w-5xl grid-cols-2 gap-4'>
       <section>
         <motion.h1
           initial={{ opacity: 0, filter: 'blur(5px)', y: -10 }}
           animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
+          transition={{ duration: 0.5, ease: 'backOut' }}
           className='text-4xl font-bold leading-tight text-neutral-100'
         >
           I&apos;m Rémi.
@@ -38,7 +58,7 @@ export default function About() {
             animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
             transition={{
               duration: 0.5,
-              ease: 'easeOut',
+              ease: 'backOut',
               delay: 0.1
             }}
           >
@@ -54,7 +74,7 @@ export default function About() {
             animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
             transition={{
               duration: 0.5,
-              ease: 'easeOut',
+              ease: 'backOut',
               delay: 0.2
             }}
           >
@@ -71,7 +91,7 @@ export default function About() {
             animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
             transition={{
               duration: 0.5,
-              ease: 'easeOut',
+              ease: 'backOut',
               delay: 0.3
             }}
           >
@@ -89,46 +109,67 @@ export default function About() {
       </section>
       <section>
         <motion.div
-          initial={{ rotate: 3, scale: 1 }}
-          whileHover={{
-            scale: 1.05,
-            rotate: 4
-          }}
+          initial={{ opacity: 0, filter: 'blur(5px)', y: -30, rotate: 5 }}
+          animate={{ opacity: 1, filter: 'blur(0px)', y: 0, rotate: 3 }}
           transition={{
-            type: 'spring',
-            stiffness: 500
+            type: 'tween',
+            duration: 0.5,
+            ease: 'backOut'
           }}
-          className='mx-auto aspect-square w-64 overflow-hidden rounded-xl'
         >
-          <Image
-            src={Me}
-            alt='Me'
-            width={400}
-            height={400}
-            className='size-full object-cover'
-            priority
-          />
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              rotate: 4
+            }}
+            transition={{
+              type: 'spring',
+              stiffness: 500
+            }}
+            className='mx-auto aspect-square w-64 overflow-hidden rounded-xl'
+          >
+            <Image
+              src={Me}
+              alt='Me'
+              width={400}
+              height={400}
+              className='size-full object-cover'
+              priority
+            />
+          </motion.div>
         </motion.div>
         <div>
           <ul className='mx-auto flex w-fit flex-col items-center gap-2 pt-16'>
             {SOCIALS.map((social, i) => (
               <li key={i} className='w-full'>
-                <Button asChild variant='link'>
-                  <a
-                    href={social.href}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='flex items-center gap-2 text-sm'
+                {social.action ? (
+                  <Button
+                    variant='link'
+                    onClick={() => handleEmailCopy(social.href)}
                   >
-                    {social.icon}
-                    <span>{social.name}</span>
-                  </a>
-                </Button>
+                    <p className='flex items-center gap-2 text-sm'>
+                      {social.icon}
+                      <span>{social.name}</span>
+                    </p>
+                  </Button>
+                ) : (
+                  <Button asChild variant='link'>
+                    <a
+                      href={social.href}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='flex items-center gap-2 text-sm'
+                    >
+                      {social.icon}
+                      <span>{social.name}</span>
+                    </a>
+                  </Button>
+                )}
               </li>
             ))}
           </ul>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

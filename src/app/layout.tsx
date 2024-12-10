@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import clsx from 'clsx'
 import DotPattern from '@/components/ui/dot-pattern'
+import { Toaster } from '@/components/ui/sonner'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${spaceGrotesk.variable} font-sans antialiased`}>
         <Header />
+        <Toaster richColors position='bottom-center' closeButton />
         <div
           className='fixed inset-0 -z-50 min-h-screen overflow-hidden'
           aria-hidden='true'

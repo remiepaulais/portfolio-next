@@ -180,7 +180,14 @@ export const SKILLS: Skill[] = [
   }
 ]
 
-export const SOCIALS = [
+type Social = {
+  name: string
+  href: string
+  icon: JSX.Element
+  action?: boolean
+}
+
+export const SOCIALS: Social[] = [
   {
     name: 'Look at my resume',
     href: '/CV_Epaulais_Remi_EN.pdf',
@@ -197,8 +204,9 @@ export const SOCIALS = [
     icon: <LineMdLinkedin />
   },
   {
-    name: 'Send me a mail',
-    href: 'mailto:remi.epaulais@gmail.com',
-    icon: <LineMdEmail />
+    name: 'Grab my email',
+    href: 'remi.epaulais@gmail.com',
+    icon: <LineMdEmail />,
+    action: true
   }
 ]
