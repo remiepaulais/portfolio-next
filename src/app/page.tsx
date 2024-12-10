@@ -1,7 +1,5 @@
 'use client'
 
-import Image from 'next/image'
-import Me from '@/assets/me.jpg'
 import ZoopText from '@/components/ZoopText'
 import { Globe } from 'lucide-react'
 import { motion } from 'motion/react'

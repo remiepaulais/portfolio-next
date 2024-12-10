@@ -1,3 +1,4 @@
+import About from '@/components/sections/About'
 import { Metadata } from 'next'
 import React from 'react'
 
@@ -8,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className='container mx-auto flex min-h-screen items-center justify-center'>
-      About Page
+    <main className='container mx-auto flex min-h-screen justify-center py-32'>
+      <About />
     </main>
   )
 }

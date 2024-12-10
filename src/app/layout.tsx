@@ -27,7 +27,10 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${spaceGrotesk.variable} font-sans antialiased`}>
         <Header />
-        <div className='fixed inset-0 -z-50 min-h-screen overflow-hidden'>
+        <div
+          className='fixed inset-0 -z-50 min-h-screen overflow-hidden'
+          aria-hidden='true'
+        >
           <DotPattern
             width={40}
             height={40}

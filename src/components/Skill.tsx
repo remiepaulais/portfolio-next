@@ -62,11 +62,7 @@ export default function Skill({
                 {'//  ' + skill.label}
               </p>
               <div className='flex w-24 justify-center'>
-                {skill.new && (
-                  <Badge className='rounded-full border-primary/50 bg-primary/20 text-primary hover:bg-primary/30'>
-                    New
-                  </Badge>
-                )}
+                {skill.new && <Badge>New</Badge>}
               </div>
             </div>
           </motion.div>

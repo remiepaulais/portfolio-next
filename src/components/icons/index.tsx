@@ -1,3 +1,6 @@
+import React from 'react'
+import type { SVGProps } from 'react'
+
 export const NextJSLogo = () => {
   return (
     <svg
@@ -106,6 +109,209 @@ export const SQLiteLogo = () => {
     >
       <title>SQLite</title>
       <path d='M21.678.521c-1.032-.92-2.28-.55-3.513.544a8.71 8.71 0 0 0-.547.535c-2.109 2.237-4.066 6.38-4.674 9.544.237.48.422 1.093.544 1.561a13.044 13.044 0 0 1 .164.703s-.019-.071-.096-.296l-.05-.146a1.689 1.689 0 0 0-.033-.08c-.138-.32-.518-.995-.686-1.289-.143.423-.27.818-.376 1.176.484.884.778 2.4.778 2.4s-.025-.099-.147-.442c-.107-.303-.644-1.244-.772-1.464-.217.804-.304 1.346-.226 1.478.152.256.296.698.422 1.186.286 1.1.485 2.44.485 2.44l.017.224a22.41 22.41 0 0 0 .056 2.748c.095 1.146.273 2.13.5 2.657l.155-.084c-.334-1.038-.47-2.399-.41-3.967.09-2.398.642-5.29 1.661-8.304 1.723-4.55 4.113-8.201 6.3-9.945-1.993 1.8-4.692 7.63-5.5 9.788-.904 2.416-1.545 4.684-1.931 6.857.666-2.037 2.821-2.912 2.821-2.912s1.057-1.304 2.292-3.166c-.74.169-1.955.458-2.362.629-.6.251-.762.337-.762.337s1.945-1.184 3.613-1.72C21.695 7.9 24.195 2.767 21.678.521m-18.573.543A1.842 1.842 0 0 0 1.27 2.9v16.608a1.84 1.84 0 0 0 1.835 1.834h9.418a22.953 22.953 0 0 1-.052-2.707c-.006-.062-.011-.141-.016-.2a27.01 27.01 0 0 0-.473-2.378c-.121-.47-.275-.898-.369-1.057-.116-.197-.098-.31-.097-.432 0-.12.015-.245.037-.386a9.98 9.98 0 0 1 .234-1.045l.217-.028c-.017-.035-.014-.065-.031-.097l-.041-.381a32.8 32.8 0 0 1 .382-1.194l.2-.019c-.008-.016-.01-.038-.018-.053l-.043-.316c.63-3.28 2.587-7.443 4.8-9.791.066-.069.133-.128.198-.194Z' />
+    </svg>
+  )
+}
+
+export function LineMdGithub(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width={24}
+      height={24}
+      viewBox='0 0 24 24'
+      {...props}
+    >
+      <g
+        fill='none'
+        stroke='currentColor'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth={2}
+      >
+        <path
+          strokeDasharray={32}
+          strokeDashoffset={32}
+          d='M12 4c1.67 0 2.61 0.4 3 0.5c0.53 -0.43 1.94 -1.5 3.5 -1.5c0.34 1 0.29 2.22 0 3c0.75 1 1 2 1 3.5c0 2.19 -0.48 3.58 -1.5 4.5c-1.02 0.92 -2.11 1.37 -3.5 1.5c0.65 0.54 0.5 1.87 0.5 2.5c0 0.73 0 3 0 3M12 4c-1.67 0 -2.61 0.4 -3 0.5c-0.53 -0.43 -1.94 -1.5 -3.5 -1.5c-0.34 1 -0.29 2.22 0 3c-0.75 1 -1 2 -1 3.5c0 2.19 0.48 3.58 1.5 4.5c1.02 0.92 2.11 1.37 3.5 1.5c-0.65 0.54 -0.5 1.87 -0.5 2.5c0 0.73 0 3 0 3'
+        >
+          <animate
+            fill='freeze'
+            attributeName='stroke-dashoffset'
+            dur='0.7s'
+            values='32;0'
+          ></animate>
+        </path>
+        <path
+          strokeDasharray={10}
+          strokeDashoffset={10}
+          d='M9 19c-1.41 0 -2.84 -0.56 -3.69 -1.19c-0.84 -0.63 -1.09 -1.66 -2.31 -2.31'
+        >
+          <animate
+            fill='freeze'
+            attributeName='stroke-dashoffset'
+            begin='0.8s'
+            dur='0.2s'
+            values='10;0'
+          ></animate>
+        </path>
+      </g>
+    </svg>
+  )
+}
+
+export function LineMdLinkedin(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width={24}
+      height={24}
+      viewBox='0 0 24 24'
+      {...props}
+    >
+      <circle cx={4} cy={4} r={2} fill='currentColor' fillOpacity={0}>
+        <animate
+          fill='freeze'
+          attributeName='fill-opacity'
+          dur='0.15s'
+          values='0;1'
+        ></animate>
+      </circle>
+      <g
+        fill='none'
+        stroke='currentColor'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth={4}
+      >
+        <path strokeDasharray={12} strokeDashoffset={12} d='M4 10v10'>
+          <animate
+            fill='freeze'
+            attributeName='stroke-dashoffset'
+            begin='0.15s'
+            dur='0.2s'
+            values='12;0'
+          ></animate>
+        </path>
+        <path strokeDasharray={12} strokeDashoffset={12} d='M10 10v10'>
+          <animate
+            fill='freeze'
+            attributeName='stroke-dashoffset'
+            begin='0.45s'
+            dur='0.2s'
+            values='12;0'
+          ></animate>
+        </path>
+        <path
+          strokeDasharray={24}
+          strokeDashoffset={24}
+          d='M10 15c0 -2.76 2.24 -5 5 -5c2.76 0 5 2.24 5 5v5'
+        >
+          <animate
+            fill='freeze'
+            attributeName='stroke-dashoffset'
+            begin='0.65s'
+            dur='0.2s'
+            values='24;0'
+          ></animate>
+        </path>
+      </g>
+    </svg>
+  )
+}
+
+export function LineMdDownload(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width={24}
+      height={24}
+      viewBox='0 0 24 24'
+      {...props}
+    >
+      <g
+        fill='none'
+        stroke='currentColor'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth={2}
+      >
+        <path
+          fill='currentColor'
+          fillOpacity={0}
+          strokeDasharray={20}
+          strokeDashoffset={20}
+          d='M12 4h2v6h2.5l-4.5 4.5M12 4h-2v6h-2.5l4.5 4.5'
+        >
+          <animate
+            fill='freeze'
+            attributeName='fill-opacity'
+            begin='0.7s'
+            dur='0.5s'
+            values='0;1'
+          ></animate>
+          <animate
+            fill='freeze'
+            attributeName='stroke-dashoffset'
+            dur='0.4s'
+            values='20;0'
+          ></animate>
+        </path>
+        <path strokeDasharray={14} strokeDashoffset={14} d='M6 19h12'>
+          <animate
+            fill='freeze'
+            attributeName='stroke-dashoffset'
+            begin='0.5s'
+            dur='0.2s'
+            values='14;0'
+          ></animate>
+        </path>
+      </g>
+    </svg>
+  )
+}
+
+export function LineMdEmail(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width={24}
+      height={24}
+      viewBox='0 0 24 24'
+      {...props}
+    >
+      <g
+        fill='none'
+        stroke='currentColor'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth={2}
+      >
+        <path
+          strokeDasharray={64}
+          strokeDashoffset={64}
+          d='M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z'
+        >
+          <animate
+            fill='freeze'
+            attributeName='stroke-dashoffset'
+            dur='0.6s'
+            values='64;0'
+          ></animate>
+        </path>
+        <path
+          strokeDasharray={24}
+          strokeDashoffset={24}
+          d='M3 6.5l9 5.5l9 -5.5'
+        >
+          <animate
+            fill='freeze'
+            attributeName='stroke-dashoffset'
+            begin='0.6s'
+            dur='0.2s'
+            values='24;0'
+          ></animate>
+        </path>
+      </g>
     </svg>
   )
 }

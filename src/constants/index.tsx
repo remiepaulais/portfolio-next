@@ -1,6 +1,10 @@
 import {
   AppWriteLogo,
   FramerMotionLogo,
+  LineMdDownload,
+  LineMdEmail,
+  LineMdGithub,
+  LineMdLinkedin,
   NextJSLogo,
   ReactLogo,
   SQLiteLogo,
@@ -83,6 +87,7 @@ export const SKILLS: Skill[] = [
         'Its hybrid static & server rendering approach makes it perfect for building fast, SEO-friendly applications.'
       ]
     },
+    new: true,
     website: 'https://nextjs.org/'
   },
   {
@@ -111,7 +116,6 @@ export const SKILLS: Skill[] = [
         'It use to be known as Framer Motion but it became independent very recently in 2024!'
       ]
     },
-    new: true,
     website: 'https://motion.dev/'
   },
   {
@@ -142,7 +146,6 @@ export const SKILLS: Skill[] = [
         'They have a way better looking website than I do, you should check it out! :)'
       ]
     },
-    new: true,
     website: 'https://www.sqlite.org/'
   },
   {
@@ -174,5 +177,28 @@ export const SKILLS: Skill[] = [
         'Important aspects include wireframing, prototyping, user research, and accessibility considerations.'
       ]
     }
+  }
+]
+
+export const SOCIALS = [
+  {
+    name: 'Look at my resume',
+    href: '/CV_Epaulais_Remi_EN.pdf',
+    icon: <LineMdDownload />
+  },
+  {
+    name: 'Follow on Github',
+    href: 'https://github.com/remiepaulais',
+    icon: <LineMdGithub />
+  },
+  {
+    name: 'Chat on LinkedIn',
+    href: 'https://www.linkedin.com/in/remi-epaulais/',
+    icon: <LineMdLinkedin />
+  },
+  {
+    name: 'Send me a mail',
+    href: 'mailto:remi.epaulais@gmail.com',
+    icon: <LineMdEmail />
   }
 ]
