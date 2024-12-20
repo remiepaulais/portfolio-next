@@ -6,7 +6,7 @@ import { motion } from 'motion/react'
 
 export default function Home() {
   return (
-    <main className='container relative mx-auto flex min-h-screen flex-col items-center justify-center'>
+    <main className='container relative mx-auto flex min-h-[100dvh] flex-col items-center justify-center'>
       <motion.p
         initial={{
           opacity: 0,
@@ -20,11 +20,11 @@ export default function Home() {
             ease: 'easeOut'
           }
         }}
-        className='text-[40px] text-accent'
+        className='text-[40px] text-lg text-accent md:text-2xl lg:text-3xl'
       >
         Hi, I&apos;m
       </motion.p>
-      <h1 className='-ml-1 text-9xl font-bold leading-none tracking-tight'>
+      <h1 className='-ml-1 text-center text-4xl font-bold leading-none tracking-tight md:text-7xl lg:text-9xl'>
         <ZoopText delay={1}>Rémi</ZoopText>{' '}
         <ZoopText delay={1.2}>Epaulais</ZoopText>
       </h1>
@@ -42,7 +42,7 @@ export default function Home() {
             ease: 'easeOut'
           }
         }}
-        className='mt-4 bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-[40px] font-bold text-transparent'
+        className='mt-4 bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-center text-[40px] text-base font-bold text-transparent md:text-2xl lg:text-3xl'
       >
         A junior front end / web app developer
       </motion.h2>

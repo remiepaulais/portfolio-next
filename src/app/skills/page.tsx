@@ -11,7 +11,7 @@ export default function SkillsPage() {
   // TODO: Mobile responsiveness and accessibility
   return (
     <>
-      <main className='container relative mx-auto my-24 h-screen items-center justify-between px-8'>
+      <main className='container relative mx-auto my-24 min-h-[100dvh] items-center justify-between px-8'>
         <Skills />
       </main>
       <div
